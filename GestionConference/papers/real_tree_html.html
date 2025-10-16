@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Association Ecosystem - Strategic Objective Tree 2030</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: white;
+            color: black;
+            overflow-x: auto;
+        }
+
+        .tree-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-width: 2800px;
+        }
+
+        .global-box {
+            border: 3px solid #667eea;
+            padding: 20px;
+            margin: 60px 20px 40px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 700px;
+            border-radius: 10px;
+        }
+
+        .connector-line {
+            width: 3px;
+            height: 40px;
+            background: #667eea;
+            margin: 0 auto;
+        }
+
+        .business-level-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 20px 0 15px 0;
+            color: #667eea;
+        }
+
+        .business-level {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 20px 0 30px 0;
+            gap: 15px;
+        }
+
+        .business-box {
+            border: 2px solid #667eea;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            background: #f0f4ff;
+            width: 160px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .business-connector {
+            width: 3px;
+            height: 30px;
+            background: #667eea;
+            margin: 0 auto;
+        }
+
+        .operational-level-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 20px 0 15px 0;
+            color: #4caf50;
+        }
+
+        .operational-level {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 20px 0;
+            gap: 15px;
+        }
+
+        .operational-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 160px;
+        }
+
+        .operational-box {
+            border: 1px solid #4caf50;
+            padding: 8px;
+            text-align: center;
+            font-size: 9px;
+            background: #e8f5e9;
+            width: 155px;
+            margin-bottom: 8px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+            border-radius: 5px;
+        }
+
+        .ds-box {
+            background: #fff3e0;
+            border-color: #ff9800;
+        }
+
+        .bi-box {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            font-size: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 French Association Ecosystem - Strategic Objective Tree 2030</h1>
+    
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+            <span>Global Objective</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box" style="background: #f0f4ff; border-color: #667eea;"></div>
+            <span>Business Objectives</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box" style="background: #fff3e0; border-color: #ff9800;"></div>
+            <span>Data Science (DS)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box" style="background: #e3f2fd; border-color: #2196f3;"></div>
+            <span>Business Intelligence (BI)</span>
+        </div>
+    </div>
+    
+    <div class="tree-container">
+        <!-- Global Objective -->
+        <div class="global-box">
+            GLOBAL OBJECTIVE<br><br>
+            "By 2030, build a transparent, connected, and predictive French associative ecosystem where every initiative finds its place and maximizes its social impact."
+        </div>
+
+        <div class="connector-line"></div>
+
+        <!-- Business Objectives Label -->
+        <div class="business-level-title">⬇️ BUSINESS OBJECTIVES ⬇️</div>
+
+        <!-- Business Objectives Level -->
+        <div class="business-level">
+            <div class="business-box">
+                🗺️ BO1<br>
+                Analyze and Optimize Geographic Distribution
+            </div>
+            <div class="business-box">
+                🌟 BO2<br>
+                Strengthen Trust - Credibility Score
+            </div>
+            <div class="business-box">
+                📈 BO3<br>
+                Track Creation Trends Over Time
+            </div>
+            <div class="business-box">
+                🤝 BO4<br>
+                Detect Collaboration Opportunities
+            </div>
+            <div class="business-box">
+                💻 BO5<br>
+                Accelerate Digital Transformation
+            </div>
+            <div class="business-box">
+                🚨 BO6<br>
+                Detect Fraud and Instability Risks
+            </div>
+            <div class="business-box">
+                💰 BO7<br>
+                Promote Financial Sustainability
+            </div>
+            <div class="business-box">
+                ⚡ BO8<br>
+                Measure Vitality and Lifespan
+            </div>
+        </div>
+
+        <!-- Connectors to Operational Level -->
+        <div class="business-level">
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+            <div class="business-connector"></div>
+        </div>
+
+        <!-- Operational Objectives Label -->
+        <div class="operational-level-title">⬇️ OPERATIONAL OBJECTIVES ⬇️</div>
+
+        <!-- Operational Objectives Level -->
+        <div class="operational-level">
+            <!-- BO1 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS1.1:</strong><br>
+                    Calculate density by sector and region
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS1.2:</strong><br>
+                    Identify thematic imbalances
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI1.1:</strong><br>
+                    Visualize thematic maps
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI1.2:</strong><br>
+                    Display comparative dashboard
+                </div>
+            </div>
+
+            <!-- BO2 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS2.1:</strong><br>
+                    Build scoring model
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS2.2:</strong><br>
+                    Detect instability patterns
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI2.1:</strong><br>
+                    Display credibility dashboard
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI2.2:</strong><br>
+                    Generate comparative ranking
+                </div>
+            </div>
+
+            <!-- BO3 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS3.1:</strong><br>
+                    Analyze annual evolution by sector
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS3.2:</strong><br>
+                    Detect creation peaks correlated with events
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI3.1:</strong><br>
+                    Display temporal and sectoral dashboard
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI3.2:</strong><br>
+                    Generate comparative graphs
+                </div>
+            </div>
+
+            <!-- BO4 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS4.1:</strong><br>
+                    Identify address clusters
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS4.2:</strong><br>
+                    Measure thematic diversity in clusters
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI4.1:</strong><br>
+                    Display map of associative hubs
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI4.2:</strong><br>
+                    Visualize collaboration network
+                </div>
+            </div>
+
+            <!-- BO5 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS5.1:</strong><br>
+                    Measure digitalization rate
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS5.2:</strong><br>
+                    Compare digitalization by association type
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI5.1:</strong><br>
+                    Display comparative table of digitalization
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI5.2:</strong><br>
+                    Generate digitalization opportunity maps
+                </div>
+            </div>
+
+            <!-- BO6 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS6.1:</strong><br>
+                    Identify duplicates and suspicious addresses
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS6.2:</strong><br>
+                    Build instability risk index
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI6.1:</strong><br>
+                    Display dashboard of sensitive addresses
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI6.2:</strong><br>
+                    Generate potential fraud map
+                </div>
+            </div>
+
+            <!-- BO7 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS7.1:</strong><br>
+                    Calculate financial stability indicators
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS7.2:</strong><br>
+                    Detect funding vulnerability patterns
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI7.1:</strong><br>
+                    Visualize financial stability distribution
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI7.2:</strong><br>
+                    Generate funding opportunity maps
+                </div>
+            </div>
+
+            <!-- BO8 Operational -->
+            <div class="operational-group">
+                <div class="operational-box ds-box">
+                    <strong>📊 DS8.1:</strong><br>
+                    Quantify organizational vitality levels
+                </div>
+                <div class="operational-box ds-box">
+                    <strong>📊 DS8.2:</strong><br>
+                    Analyze lifespan patterns across sectors
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI8.1:</strong><br>
+                    Display vitality dashboards by territory
+                </div>
+                <div class="operational-box bi-box">
+                    <strong>📈 BI8.2:</strong><br>
+                    Generate lifespan comparative reports
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div style="margin-top: 50px; padding: 20px; border: 2px solid #667eea; border-radius: 10px; background: #f0f4ff; max-width: 800px;">
+            <h3 style="text-align: center; color: #667eea;">📊 Hierarchy Summary</h3>
+            <div style="text-align: center; line-height: 2;">
+                <strong>Level 1 (Strategic):</strong> 1 Global Objective<br>
+                ⬇️<br>
+                <strong>Level 2 (Business):</strong> 8 Business Objectives (BO1-BO8)<br>
+                ⬇️<br>
+                <strong>Level 3 (Operational):</strong> 32 Operational Objectives<br>
+                ├── 16 Data Science (DS) Objectives<br>
+                └── 16 Business Intelligence (BI) Objectives
+            </div>
+        </div>
+    </div>
+</body>
+</html>
