@@ -57,13 +57,16 @@ class AdminPerson(admin.ModelAdmin):
     
     duration.short_description = 'Duration (days)'
 
+@admin.action(description='mark_as_payed')
+def mark_as_payed(modeladmin,req,queryset):
+    queryset.update(payed=True)
 
 class SubmissionAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'user_id', 'conference_id', 'submission_date', 'payed', 'short_abstract')
+    list_display = ('title', 'status','submission_date', 'payed', 'short_abstract')
     list_editable = ('status', 'payed')
     ordering = ('-submission_date',)
-    search_fields = ('title', 'keywords', 'user_id__username')
-    list_filter = ('status', 'payed', 'conference_id', 'submission_date')
+    search_fields = ('title', 'keywords')
+    list_filter = ('status', 'payed', 'submission_date')
     
     fieldsets = (
         ("General Information", {
@@ -73,14 +76,16 @@ class SubmissionAdmin(admin.ModelAdmin):
             'fields': ('paper', 'conference_id')
         }),
         ("Tracking", {
-            'fields': ('status', 'payed', 'submission_date', 'user_id')
+            'fields': ('status', 'payed', 'user_id')
         }),
     )
     
     readonly_fields = ('submission_id',)
+    actions=[mark_as_payed]
+
     
     def short_abstract(self, obj):
-        """Truncate abstract to 50 characters for quick display"""
+        """Truncate abstract JUSQU A  50 characters """
         if obj.abstract:
             return obj.abstract[:50] + '...' if len(obj.abstract) > 50 else obj.abstract
         return '-'
