@@ -1,6 +1,8 @@
 from django import forms 
 from .models import Conference
 
+from .models import Submission
+
 
 
 class ConferenceModel(forms.ModelForm):
@@ -32,3 +34,29 @@ class ConferenceModel(forms.ModelForm):
                 }
             )     
         }
+        
+        
+      
+
+class SubmissionForm(forms.ModelForm):
+    class Meta:
+        model = Submission
+        fields = ['title', 'abstract', 'keywords', 'paper', 'conference_id', 'status', 'payed']
+        widgets = {
+            'status': forms.Select(attrs={'class': 'form-select'}),
+            'conference_id': forms.Select(attrs={'class': 'form-select'}),
+            'keywords': forms.TextInput(attrs={'placeholder': 'Séparer les mots-clés par des virgules'}),
+            'abstract': forms.Textarea(attrs={'rows': 4}),
+        }
+
+
+
+class UpdateSubmissionForm(forms.ModelForm):
+    class Meta:
+        model = Submission
+        fields = ['title', 'abstract', 'keywords', 'paper']
+        widgets = {
+            'keywords': forms.TextInput(attrs={'placeholder': 'Séparer les mots-clés par des virgules'}),
+            'abstract': forms.Textarea(attrs={'rows': 4}),
+        }
+        

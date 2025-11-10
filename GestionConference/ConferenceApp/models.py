@@ -5,6 +5,9 @@ from django.utils import timezone
 import uuid
 import random
 import string
+from django.views.generic import ListView
+from .models import Submission
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Validateur global pour le champ keywords

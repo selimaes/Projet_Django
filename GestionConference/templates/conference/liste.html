@@ -11,9 +11,11 @@
              <td>  {{c.name}} </td>
                 <td>  {{c.location}} </td>
                 <td>  
-                    <a href=" {% url 'conference_detail' c.pk %}">details </a>
+                    <a href=" {% url 'conference_detail' c.pk %}">details </a> <br></br>
+                    {%if user.is_authenticated and user.role == 'committee '%}
                      <a href=" {% url 'conference_edit' c.pk %}">modifier </a>
                      <a href=" {% url 'conference_delete' c.pk %}">supprimer </a>
+                     {%endif%}
 
                 </td>
 

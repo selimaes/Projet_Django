@@ -1,0 +1,13 @@
+{%extends 'base.html' %}
+{% block content %}
+
+
+<h2> Créer un compte connexion </h2>
+<form method = "POST">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">se connecter</button>
+    
+</form>
+{% endblock %}    

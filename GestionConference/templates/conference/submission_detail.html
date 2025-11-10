@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Détails de la soumission</h2>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ submission.title }}</h5>
+    <p><strong>Statut :</strong> {{ submission.status }}</p>
+    <p><strong>Utilisateur :</strong> {{ submission.user_id.username }}</p>
+    <p><strong>Conférence :</strong> {{ submission.conference_id.name }}</p>
+    <p><strong>Date de soumission :</strong> {{ submission.submission_date|date:"d/m/Y H:i" }}</p>
+    <p><strong>Paiement :</strong> {% if submission.payed %}Payé{% else %}Non payé{% endif %}</p>
+    <p><strong>Résumé :</strong> {{ submission.abstract }}</p>
+    <p><strong>Keywords :</strong> {{ submission.keywords }}</p>
+    <p><strong>PDF :</strong> <a href="{{ submission.paper.url }}" target="_blank">Télécharger</a></p>
+  </div>
+</div>
+
+<a href="{% url 'list_submissions' %}" class="btn btn-secondary mt-3">Retour à la liste</a>
+{% endblock %}

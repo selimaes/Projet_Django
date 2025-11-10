@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Mes Soumissions</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Statut</th>
+            <th>Utilisateur</th>
+            <th>Conférence</th>
+            <th>Date de soumission</th>
+            <th>Paiement</th>
+            <th>Détails</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for submission in submissions %}
+        <tr>
+            <td>{{ submission.title }}</td>
+            <td>{{ submission.status }}</td>
+            <td>{{ submission.user_id.username }}</td>
+            <td>{{ submission.conference_id.name }}</td>
+            <td>{{ submission.submission_date|date:"d/m/Y H:i" }}</td>
+            <td>
+                {% if submission.payed %}
+                    Payé
+                {% else %}
+                    Non payé
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'submission_detail' submission.pk %}" class="btn btn-info btn-sm">Détails</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7">Vous n'avez aucune soumission.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
