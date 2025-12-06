@@ -8,6 +8,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Submission
 from .forms import SubmissionForm 
 from django.shortcuts import redirect
+from django.views.generic import CreateView
+
 
 
 class ListSubmissions(LoginRequiredMixin, ListView):
@@ -89,6 +91,7 @@ class AddSubmission(LoginRequiredMixin, CreateView):
         # Associer automatiquement la soumission à l'utilisateur connecté
         form.instance.user_id = self.request.user
         return super().form_valid(form)
+     
     
 
 class UpdateSubmission(LoginRequiredMixin, UpdateView):

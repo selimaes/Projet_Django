@@ -1,20 +1,78 @@
 {% extends 'base.html' %}
-{% block content %}
-<h2>Détails de la soumission</h2>
 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{ submission.title }}</h5>
-    <p><strong>Statut :</strong> {{ submission.status }}</p>
-    <p><strong>Utilisateur :</strong> {{ submission.user_id.username }}</p>
-    <p><strong>Conférence :</strong> {{ submission.conference_id.name }}</p>
-    <p><strong>Date de soumission :</strong> {{ submission.submission_date|date:"d/m/Y H:i" }}</p>
-    <p><strong>Paiement :</strong> {% if submission.payed %}Payé{% else %}Non payé{% endif %}</p>
-    <p><strong>Résumé :</strong> {{ submission.abstract }}</p>
-    <p><strong>Keywords :</strong> {{ submission.keywords }}</p>
-    <p><strong>PDF :</strong> <a href="{{ submission.paper.url }}" target="_blank">Télécharger</a></p>
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4 text-primary">📄 Détails de la soumission</h2>
+
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body p-4">
+      <h4 class="card-title text-center text-dark mb-4">{{ submission.title }}</h4>
+
+      <table class="table table-striped table-hover align-middle">
+        <tbody>
+          <tr>
+            <th scope="row" class="w-25">Statut</th>
+            <td>
+              <span class="badge 
+                {% if submission.status == 'acceptée' %}
+                  bg-success
+                {% elif submission.status == 'rejetée' %}
+                  bg-danger
+                {% else %}
+                  bg-warning text-dark
+                {% endif %}
+              ">
+                {{ submission.status }}
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>Utilisateur</th>
+            <td>{{ submission.user_id.username }}</td>
+          </tr>
+          <tr>
+            <th>Conférence</th>
+            <td>{{ submission.conference_id.name }}</td>
+          </tr>
+          <tr>
+            <th>Date de soumission</th>
+            <td>{{ submission.submission_date|date:"d/m/Y H:i" }}</td>
+          </tr>
+          <tr>
+            <th>Paiement</th>
+            <td>
+              {% if submission.payed %}
+                <span class="badge bg-success">Payé</span>
+              {% else %}
+                <span class="badge bg-danger">Non payé</span>
+              {% endif %}
+            </td>
+          </tr>
+          <tr>
+            <th>Résumé</th>
+            <td>{{ submission.abstract }}</td>
+          </tr>
+          <tr>
+            <th>Mots-clés</th>
+            <td>{{ submission.keywords }}</td>
+          </tr>
+          <tr>
+            <th>Fichier PDF</th>
+            <td>
+              <a href="{{ submission.paper.url }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-file-earmark-pdf"></i> Télécharger le fichier
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="{% url 'list_submissions' %}" class="btn btn-secondary px-4">
+      ← Retour à la liste
+    </a>
   </div>
 </div>
-
-<a href="{% url 'list_submissions' %}" class="btn btn-secondary mt-3">Retour à la liste</a>
 {% endblock %}

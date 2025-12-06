@@ -6,7 +6,7 @@ import uuid
 import random
 import string
 from django.views.generic import ListView
-from .models import Submission
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -31,6 +31,7 @@ class Conference(models.Model):
     location = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
+    
 
     THEME = [
         ("CS&AI", "Computer Science & Artificial Intelligence"),

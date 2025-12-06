@@ -1,0 +1,9 @@
+{
+    "servers": {
+        "conferenceAssistant": {
+            "type": "stdio",
+            "command": "python",
+            "args": ["GestionConference/mcp_server.py"]
+        }
+    }
+}
