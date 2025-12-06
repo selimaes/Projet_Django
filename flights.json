@@ -1,0 +1,22 @@
+{
+  "flights": [
+    {
+      "flight_number": "TU123",
+      "airline": "TunisAir",
+      "departure_city": "Tunis",
+      "arrival_city": "Paris",
+      "departure_time": "08:30",
+      "arrival_time": "11:15",
+      "status": "on time"
+    },
+    {
+      "flight_number": "AF456",
+      "airline": "Air France",
+      "departure_city": "Paris",
+      "arrival_city": "Tunis",
+      "departure_time": "14:00",
+      "arrival_time": "17:00",
+      "status": "delayed"
+    }
+  ]
+}

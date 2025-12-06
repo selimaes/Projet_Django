@@ -1,0 +1,15 @@
+{
+    "servers": {
+        "sayHello": {
+            "type": "stdio",
+            "command": "uv",
+            "args": ["run", "main.py"]
+        },
+        "flights": {
+            "type": "stdio",
+            "command": "uv",
+            "args": ["run", "flights_server.py"]
+        }
+    }
+}
+
